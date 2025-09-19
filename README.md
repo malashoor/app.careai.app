@@ -31,3 +31,4 @@ Routes are nested under `/en` and `/ar`. The root route redirects to `/en`. The 
 # Test
 - CI validation: 2025-09-19T05:48:01Z
 # Test sync trigger
+- post-hardening heartbeat: 2025-09-19T06:02:27Z
