@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "es2021"
+      "es6"
     ],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -17,18 +16,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@/i18n/*": [
+        "./src/i18n/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -37,17 +39,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "netlify/**/*",
-    "CareAI-Flutter/**/*",
-    "functions/**/*",
-    "tests/**/*",
-    "vitest.setup.ts",
-    "lib/md.ts",
-    "lib/web-vitals.ts",
-    "app/api/**/*",
-    "lib/data/**/*",
-    "lib/hooks/**/*",
-    "app/simple-auth-test/**/*"
+    "node_modules"
   ]
 }
