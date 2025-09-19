@@ -28,3 +28,4 @@ Routes are nested under `/en` and `/ar`. The root route redirects to `/en`. The 
 - Colors/brand: `tailwind.config.ts`
 - Sections: `components/*`
 - Pages: `app/[locale]/*`
+# Test

@@ -3,16 +3,6 @@ process.env.TZ = 'UTC';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Use static export for Netlify compatibility
-  output: 'export',
-  trailingSlash: true,
-  // Temporarily disable TypeScript and ESLint checking for build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     // Disable image optimization for static export compatibility
     unoptimized: true,
@@ -23,16 +13,6 @@ const nextConfig = {
   },
   // Exclude Flutter directory from build to prevent env var conflicts
   // Removed invalid experimental option for Next.js 14.2.31
-  
-  // Exclude functions directory from build (Deno functions)
-  webpack: (config) => {
-    config.externals = config.externals || [];
-    config.externals.push({
-      'https://deno.land/std@0.224.0/http/server.ts': 'commonjs https',
-      'https://esm.sh/@supabase/supabase-js@2': 'commonjs @supabase/supabase-js',
-    });
-    return config;
-  },
   
   // Security headers
   async headers() {

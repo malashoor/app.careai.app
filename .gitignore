@@ -1,7 +1,0 @@
-node_modules/
-.next/
-out/
-.netlify/
-playwright-report/
-__baseline__/
-__diff__/
