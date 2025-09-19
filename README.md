@@ -29,3 +29,5 @@ Routes are nested under `/en` and `/ar`. The root route redirects to `/en`. The 
 - Sections: `components/*`
 - Pages: `app/[locale]/*`
 # Test
+- CI validation: 2025-09-19T05:48:01Z
+# Test sync trigger
